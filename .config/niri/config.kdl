@@ -175,22 +175,22 @@ animations {
 // Window Rules
 // ==================================================
 
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    // default-column-width {}
-    //match is-floating=false
-    opacity 0.75
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-        //noise 0.05
-        //saturation 3
-    }
-    popups {
-        opacity 1.0
-    }
-}
+// window-rule {
+//     match app-id=r#"^org\.wezfurlong\.wezterm$"#
+//     // default-column-width {}
+//     //match is-floating=false
+//     opacity 0.75
+//     draw-border-with-background false
+//     background-effect {
+//         xray true
+//         blur true
+//         //noise 0.05
+//         //saturation 3
+//     }
+//     popups {
+//         opacity 1.0
+//     }
+// }
 
 window-rule {
     match app-id="org.gnome.Nautilus"
@@ -338,9 +338,9 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 20
+    geometry-corner-radius 10 //20
     clip-to-geometry true
-    opacity 0.75
+    opacity 0.72
     draw-border-with-background false
     background-effect {
         xray true

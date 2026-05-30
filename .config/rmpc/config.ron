@@ -1,0 +1,77 @@
+// ~/.config/rmpc/config.ron
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    address: "/tmp/mpd_socket",
+    password: None,
+    theme: None,
+    cache_dir: Some("/home/dipankar/.cache/rmpc"),
+    volume_step: 5,
+    max_fps: 30,
+    enable_mouse: true,
+    enable_config_hot_reload: true,
+    
+    album_art: (
+        method: Auto,
+        max_size_px: (width: 1200, height: 1200),
+        disabled_protocols: ["http://", "https://"],
+        vertical_align: Center,
+        horizontal_align: Center,
+    ),
+
+    keybinds: (
+        global: {
+            "q": Quit,
+            "p": TogglePause,
+            ">": NextTrack,
+            "<": PreviousTrack,
+            ".": VolumeUp,
+            ",": VolumeDown,
+            "1": SwitchToTab("Queue"),
+            "2": SwitchToTab("Directories"),
+            "7": SwitchToTab("Search"),
+        },
+        navigation: {
+            "k": Up,
+            "j": Down,
+            "h": Left,
+            "l": Right,
+            "/": EnterSearch,
+            "a": Add,
+        },
+    ),
+
+    tabs: [
+        (
+            name: "Queue",
+            pane: Split(
+                direction: Horizontal,
+                panes: [
+                    (
+                        size: "35%",
+                        pane: Split(
+                            direction: Vertical,
+                            panes: [
+                                (size: "100%", pane: Pane(AlbumArt), borders: "LEFT | RIGHT | TOP", border_symbols: Rounded),
+                                (size: "7", pane: Pane(Lyrics), borders: "ALL", border_title: [(kind: Text(" Lyrics "))])
+                            ]
+                        )
+                    ),
+                    (
+                        size: "65%",
+                        pane: Split(
+                            direction: Vertical,
+                            panes: [
+                                (size: "3", pane: Pane(QueueHeader()), borders: "ALL"),
+                                (size: "100%", pane: Pane(Queue), borders: "LEFT | RIGHT | BOTTOM")
+                            ]
+                        )
+                    )
+                ]
+            )
+        ),
+        // Additional tabs for Directories, Artists, and Search...
+    ],
+)
+
