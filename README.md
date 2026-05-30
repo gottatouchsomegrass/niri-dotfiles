@@ -1,25 +1,59 @@
-
 # Niri Dotfiles
 
-Personal Linux desktop configuration.
+My personal Linux desktop configuration built around **Niri**, featuring a Wayland workflow, Neovim development environment, and a customized terminal setup.
+
+## Preview
+
+<p align="center">
+  <img src="assets/p1.png" width="800">
+  <img src="assets/p2.png" width="800">
+  <img src="assets/p3.png" width="800">
+  <img src="assets/p4.png" width="800">
+</p>
+
+<p align="center">
+  <img src="assets/desktop.gif" width="800">
+</p>
 
 ## Components
 
+### Window Manager
+
 * Niri
-* Neovim (NvChad)
+
+### Terminal
+
 * Kitty
-* Zsh + Powerlevel10k
+
+### Shell
+
+* Zsh
+* Powerlevel10k
 * Fish
+
+### Editor
+
+* Neovim (NvChad)
+
+### Utilities
+
 * Fastfetch
 * Cava
-* Spicetify
 * Zathura
 * Zed
 * Swaylock
+* Spicetify
+* MPD + RMPC
 
-## Screenshots
+## Features
 
-(Add screenshots here)
+* Niri dynamic tiling workflow
+* Customized Kitty configuration
+* NvChad-based Neovim setup
+* Fastfetch system information dashboard
+* Terminal music visualization with Cava
+* Spotify customization via Spicetify
+* Powerlevel10k prompt configuration
 
 ## Installation
 
@@ -47,15 +81,46 @@ Hide untracked files:
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-## Notes
+## Included Configurations
 
-Some software may need to be installed separately:
+```text
+.config/
+├── cava
+├── fastfetch
+├── fish
+├── kitty
+├── niri
+├── nvim
+├── rmpc
+├── spicetify
+├── swaylock
+├── zathura
+├── zed
+└── zsh
+```
+
+## Requirements
+
+Install the required applications before checking out the configuration:
 
 * Niri
-* Neovim
 * Kitty
+* Neovim
+* Zsh
+* Fish
 * Fastfetch
 * Cava
 * Zathura
 * Zed
 * Spicetify
+* MPD
+* RMPC
+
+## Credits
+
+* NvChad
+* Niri
+* Catppuccin
+* Powerlevel10k
+
+Configurations are adapted and customized for personal use.
