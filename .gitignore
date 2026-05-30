@@ -1,0 +1,28 @@
+
+# Shell
+
+.zsh_history
+.zcompdump*
+.oh-my-zsh/
+
+# Backup files
+
+*.backup
+*.backup.*
+*.save
+*.save.*
+
+# Neovim
+
+*.swp
+*.swo
+Session.vim
+
+# OS
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
